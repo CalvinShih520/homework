@@ -7,6 +7,8 @@
     <title>PChome24h</title>
     <link rel="stylesheet" href="./css/normalize.css">
     <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
+
 </head>
 <body>
     <div class="wrapper">
@@ -59,7 +61,7 @@
             <div class="navbar2">
                 <div class="container">
                     <div class="nav-bar">
-                        <div>
+                        <div class="nav-bar-logo">
                             <a href="#!">
                                 <p class="logo">PChome<br>24h購物</p>
                             </a>                        
@@ -69,15 +71,13 @@
                                 <input type="text" placeholder="輸入你想找的商品">
                                 <!-- <input type="submit" value="搜尋"> -->
                                 <a href="#!">
-                                    <div class="btn">搜尋</div>
+                                    <div class="btn">
+                                        <i class="fa-solid fa-magnifying-glass fa-md"></i>
+                                    </div>
                                 </a>
                             </form>
-                        </div>
-                        
-                        
-                        
-                    </div>
-                    
+                        </div> 
+                    </div>      
                 </div>
             </div>
             <div class="navbar3">
@@ -140,13 +140,14 @@
         <!-- End header  -->
 
         <!-- Start main -->
-        <section class="main">
+        <section class="main mt16">
             <div class="container">
                 <div class="row">
-                    <div class="col-1">
+                    <!-- <div class="col-1"> -->
+                    <div class="col-lg-2">
                         <a href="#!" class="side-ad">
                             <div class="side-ad-head">
-                                <img src="https://picsum.photos/200/200/?random=10">
+                                <img src="https://picsum.photos/188/193/?random=10">
                             </div>
                             <div class="side-ad-body">
                                 <div class="side-ad-body-logo">
@@ -158,9 +159,9 @@
                                 </div>
                             </div>
                         </a>
-                        <a href="#!" class="side-ad" style="padding-top: 15px;">
+                        <a href="#!" class="side-ad" style="margin-top: 26px;">
                             <div class="side-ad-head">
-                                <img src="https://picsum.photos/200/200/?random=30">
+                                <img src="https://picsum.photos/188/193/?random=30">
                             </div>
                             <div class="side-ad-body">
                                 <div class="side-ad-body-logo">
@@ -175,53 +176,66 @@
                         
                         
                     </div>
-                    <div class="col-2">
-                        <div class="hero">
-                            <div class="slide">
-                                <img src="https://picsum.photos/800/300/?random=10" alt="">
+
+                    <div class="col-lg-8">
+                        <div class="row">
+                            <div class="col-lg-12">
+                                <div class="banner">
+                                    <div class="slide">
+                                        <img src="https://picsum.photos/822/302/?random=10" alt="">
+                                    </div>
+                                </div>
                             </div>
-                            <ul class="ad-discount-list">
-                                <li class="ad-discount-item">
-                                    <a href="#!" class="ad-discount-link">
-                                        <div class="bg-img">
-                                            <img src="https://picsum.photos/256/98/?random=10">
-                                        </div>
-                                        <div class="edit">
-                                            <div class="ad-discount-title" style="color:azure">空調早販優惠</div>
-                                            <div class="ad-discount-subtitle" style="color:azure">限時只到 4/30</div>
-                                        </div>
-                                    </a>
-                                </li>
-                                <li class="ad-discount-item">
-                                    <a href="#!" class="ad-discount-link">
-                                        <div class="bg-img">
-                                            <img src="https://picsum.photos/256/98/?random=20">
-                                        </div>
-                                        <div class="edit">
-                                            <div class="ad-discount-title" style="color:azure">Pi 拍錢包</div>
-                                            <div class="ad-discount-subtitle" style="color:azure">綁玉山 Pi卡</div>
-                                        </div>
-                                    </a>
-                                </li>
-                                <li class="ad-discount-item">
-                                    <a href="#!" class="ad-discount-link">
-                                        <div class="bg-img">
-                                            <img src="https://picsum.photos/256/98/?random=30">
-                                        </div>
-                                        <div class="edit">
-                                            <div class="ad-discount-title" style="color:azure">換季有對策</div>
-                                            <div class="ad-discount-subtitle" style="color:azure">抗敏收納有一套</div>
-                                        </div>
-                                    </a>
-                                </li>
-                            </ul>
+                        </div>
+                        <div class="row mt16">
+                            <div class="col-lg-12">
+                                <div class="ad-discount">
+                                    <ul class="ad-discount-list">
+                                        <li class="ad-discount-item">
+                                            <a href="#!" class="ad-discount-link">
+                                                <div class="bg-img">
+                                                    <img src="https://picsum.photos/263/98/?random=10">
+                                                </div>
+                                                <div class="edit">
+                                                    <div class="ad-discount-title" style="color:azure">空調早販優惠</div>
+                                                    <div class="ad-discount-subtitle" style="color:azure">限時只到 4/30</div>
+                                                </div>
+                                            </a>
+                                        </li>
+                                        <li class="ad-discount-item ml16">
+                                            <a href="#!" class="ad-discount-link">
+                                                <div class="bg-img">
+                                                    <img src="https://picsum.photos/263/98/?random=20">
+                                                </div>
+                                                <div class="edit">
+                                                    <div class="ad-discount-title" style="color:azure">Pi 拍錢包</div>
+                                                    <div class="ad-discount-subtitle" style="color:azure">綁玉山 Pi卡</div>
+                                                </div>
+                                            </a>
+                                        </li>
+                                        <li class="ad-discount-item ml16">
+                                            <a href="#!" class="ad-discount-link">
+                                                <div class="bg-img">
+                                                    <img src="https://picsum.photos/263/98/?random=30">
+                                                </div>
+                                                <div class="edit">
+                                                    <div class="ad-discount-title" style="color:azure">換季有對策</div>
+                                                    <div class="ad-discount-subtitle" style="color:azure">抗敏收納有一套</div>
+                                                </div>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                
+                            </div>
+                            
                         </div>
                     </div>
-                    <div class="col-1">
+                    <div class="col-lg-2">
                         <div class="user-card">
                             <div class="shippingSign">
                                 <p class="signText">
-                                    低門檻!
+                                    低門檻 !
                                     <span class="signPrice">$490</span>
                                     免運
                                 </p>
@@ -257,24 +271,25 @@
         <!-- End main -->
 
         <!-- Start second -->
-        <section class="second" style="margin-top: 24px;">
+        <section class="second mt24">
             <div class="container">
                 <div class="row">
-                    <div class="col-1">
-                        <a href="#!" class="side-ad">
-                            <div class="side-ad-head">
-                                <img src="https://picsum.photos/200/250/?random=10">
+                    <div class="col-lg-2">
+                        <a href="#!" class="second-side-ad mb16">
+                            <div class="second-side-ad-head">
+                                <img src="https://picsum.photos/188/248/?random=10">
                             </div>
                         </a>
-                        <a href="#!" class="side-ad" style="padding-top: 15px;">
-                            <div class="side-ad-head">
-                                <img src="https://picsum.photos/200/250/?random=30">
+                        <a href="#!" class="second-side-ad">
+                            <div class="second-side-ad-head">
+                                <img src="https://picsum.photos/188/248/?random=30">
                             </div>
                         </a>
                     </div>
-                    <div class="hero-2">
-                        <div class="col-3">
-                            <div class="sale">
+
+                    
+                    <div class="col-lg-5">
+                            <div class="sale-left">
                                 <div class="sale-bar-1">
                                     <div class="bar-top-1">
                                         <p class="bar-top-ad-1">限時瘋搶</p>
@@ -310,7 +325,7 @@
                                         </div>
                                         <div class="sub-cd-main">
                                             <div class="sub-cd-image">
-                                                 <img src="https://picsum.photos/100/100/?random=10">
+                                                 <img src="https://picsum.photos/103/103/?random=10">
                                             </div>
                                             <div class="sub-cd-text">
                                                 <div class="sub-prod-title">限時一日優惠全館85折</div>
@@ -327,7 +342,7 @@
                                         </div>
                                         <div class="sub-cd-main">
                                             <div class="sub-cd-image">
-                                                 <img src="https://picsum.photos/100/100/?random=15">
+                                                 <img src="https://picsum.photos/103/103/?random=15">
                                             </div>
                                             <div class="sub-cd-text">
                                                 <div class="sub-prod-title">限時一日優惠全館85折</div>
@@ -339,8 +354,8 @@
                                 </div>
 
                             </div>
-                        </div>
-                        <div class="col-3">
+                    </div>
+                    <div class="col-lg-5">
                             <div class="sale-right">
                                 <div class="sale-bar-1-right">
                                     <div class="bar-top-1-right">
@@ -359,62 +374,79 @@
                                     <ul class="crazy-list">
                                         <li class="crazy-item">
                                             <div class="crazy-item-info">
-                                                <div class="crazy-item-image">
-                                                     <img src="https://picsum.photos/120/120/?random=21">
+                                                <div class="crazy-info-head">
+                                                    <div class="crazy-item-image">
+                                                        <img src="https://picsum.photos/118/118/?random=21">
+                                                    </div>
                                                 </div>
-                                                <div class="crazy-item-text">
-                                                    <div class="crazy-item-title">限時一日優惠</div>
-                                                    <div class="crazy-item-price">$1,683</div>
-                                                    <div class="crazy-item-sale-price">$2,180</div>
-                                                </div>
+                                                <div class="crazy-info-body">
+                                                    <div class="crazy-item-text">
+                                                        <div class="crazy-item-title">限時一日優惠</div>
+                                                        <div class="crazy-item-price">$1,683</div>
+                                                        <div class="crazy-item-sale-price">$2,180</div>
+                                                    </div>
+                                                </div>                  
                                             </div>
                                         </li>
                                         <li class="crazy-item">
                                             <div class="crazy-item-info">
-                                                <div class="crazy-item-image">
-                                                     <img src="https://picsum.photos/120/120/?random=22">
+                                                <div class="crazy-info-head">
+                                                    <div class="crazy-item-image">
+                                                        <img src="https://picsum.photos/118/118/?random=22">
+                                                    </div>
                                                 </div>
-                                                <div class="crazy-item-text">
-                                                    <div class="crazy-item-title">限時一日</div>
-                                                    <div class="crazy-item-price">$1,683</div>
-                                                    <div class="crazy-item-sale-price">$2,180</div>
-                                                </div>
+                                                <div class="crazy-info-body">
+                                                    <div class="crazy-item-text">
+                                                        <div class="crazy-item-title">限時一日優惠</div>
+                                                        <div class="crazy-item-price">$1,683</div>
+                                                        <div class="crazy-item-sale-price">$2,180</div>
+                                                    </div>
+                                                </div>                  
                                             </div>
-                                        </li>
-                                        <li class="crazy-item">
+                                        </li><li class="crazy-item">
                                             <div class="crazy-item-info">
-                                                <div class="crazy-item-image">
-                                                     <img src="https://picsum.photos/120/120/?random=23">
+                                                <div class="crazy-info-head">
+                                                    <div class="crazy-item-image">
+                                                        <img src="https://picsum.photos/118/118/?random=23">
+                                                    </div>
                                                 </div>
-                                                <div class="crazy-item-text">
-                                                    <div class="crazy-item-title">限時一日</div>
-                                                    <div class="crazy-item-price">$1,683</div>
-                                                    <div class="crazy-item-sale-price">$2,180</div>
-                                                </div>
+                                                <div class="crazy-info-body">
+                                                    <div class="crazy-item-text">
+                                                        <div class="crazy-item-title">限時一日優惠</div>
+                                                        <div class="crazy-item-price">$1,683</div>
+                                                        <div class="crazy-item-sale-price">$2,180</div>
+                                                    </div>
+                                                </div>                  
                                             </div>
-                                        </li>
-                                        <li class="crazy-item">
+                                        </li><li class="crazy-item">
                                             <div class="crazy-item-info">
-                                                <div class="crazy-item-image">
-                                                     <img src="https://picsum.photos/120/120/?random=24">
+                                                <div class="crazy-info-head">
+                                                    <div class="crazy-item-image">
+                                                        <img src="https://picsum.photos/118/118/?random=24">
+                                                    </div>
                                                 </div>
-                                                <div class="crazy-item-text">
-                                                    <div class="crazy-item-title">限時一日</div>
-                                                    <div class="crazy-item-price">$1,683</div>
-                                                    <div class="crazy-item-sale-price">$2,180</div>
-                                                </div>
+                                                <div class="crazy-info-body">
+                                                    <div class="crazy-item-text">
+                                                        <div class="crazy-item-title">限時一日優惠</div>
+                                                        <div class="crazy-item-price">$1,683</div>
+                                                        <div class="crazy-item-sale-price">$2,180</div>
+                                                    </div>
+                                                </div>                  
                                             </div>
-                                        </li>
-                                        <li class="crazy-item">
+                                        </li><li class="crazy-item">
                                             <div class="crazy-item-info">
-                                                <div class="crazy-item-image">
-                                                     <img src="https://picsum.photos/120/120/?random=25">
+                                                <div class="crazy-info-head">
+                                                    <div class="crazy-item-image">
+                                                        <img src="https://picsum.photos/118/118/?random=25">
+                                                    </div>
                                                 </div>
-                                                <div class="crazy-item-text">
-                                                    <div class="crazy-item-title">限時一日</div>
-                                                    <div class="crazy-item-price">$1,683</div>
-                                                    <div class="crazy-item-sale-price">$2,180</div>
-                                                </div>
+                                                <div class="crazy-info-body">
+                                                    <div class="crazy-item-text">
+                                                        <div class="crazy-item-title">限時一日優惠</div>
+                                                        <div class="crazy-item-price">$1,683</div>
+                                                        <div class="crazy-item-sale-price">$2,180</div>
+                                                    </div>
+                                                </div>                  
                                             </div>
                                         </li>
                                         <li class="crazy-item">
@@ -422,22 +454,24 @@
                                                 <li class="tag-item">
                                                     <a href="#!" class="link">3C數位/手機</a>
                                                 </li>
-                                                <li class="tag-item">
+                                                <li class="tag-item mt12">
                                                     <a href="#!" class="link">家電/生活休閒</a>
                                                 </li>
-                                                <li class="tag-item">
+                                                <li class="tag-item mt12">
                                                     <a href="#!" class="link">食日用/美妝流行</a> 
                                                 </li>
                                                 <li class="tag-btn">
-                                                    <a href="#!" class="link">看更多</a> 
+                                                    <a href="#!" class="link">看更多
+                                                        <i class="fa-solid fa-caret-right"></i>
+                                                    </a> 
                                                 </li>
                                             </ul>
                                         </li>
                                     </ul>
                                 </div>
                             </div>
-                        </div>
                     </div>
+                    
                     
                 </div>
             </div>

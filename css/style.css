@@ -46,20 +46,14 @@ a{
 \* ---------------------- */
 
 .container{
-    width: 1256px;
+    max-width: 1256px;
     margin: 0 auto;
-    padding: 0 8px;
+    padding: 0 16px;
     /* border: 1px solid #333; */
 }
 .row{
     display: flex;
-}
-.col-1{
-    width: 200px;
-    padding: 8px 0;
-}
-.col-2{
-    width: 840px;
+    margin: 0 -8px;
 }
 .col-3{
     width: 510px;
@@ -67,9 +61,55 @@ a{
     border: 1px solid red;
     
 }
+.col-lg-1,.col-lg-2,.col-lg-3,.col-lg-4,
+.col-lg-5,.col-lg-6,.col-lg-8,.col-lg-12{
+    padding-left: 8px;
+    padding-right: 8px;
+}
+.col-lg-1{
+    width: 8.333333%;
+}
+.col-lg-2{
+    width: 16.666666%;
+}
+.col-lg-3{
+    width: 25%;
+}
+.col-lg-4{
+    width: 33.333333%;
+}
+.col-lg-5{
+    width: 41.666666%;
+}
+.col-lg-6{
+    width: 50%;
+}
+.col-lg-8{
+    width: 66.666666%;
+}
+.col-lg-12{
+    width: 100%;
+}
+.mt12{
+    margin-top: 12px;
+}
+.mt16{
+    margin-top: 16px;
+}
+.mt24{
+    margin-top: 24px;
+}
+.ml16{
+    margin-left: 16px;
+}
+.mb16{
+    margin-bottom: 16px;
+}
 /* ---------------------- *\
     Component
 \* ---------------------- */
+
+/* navbar 區塊1 */
 .navbar{
     height: 38px;
     /* border: 1px solid blue; */
@@ -101,31 +141,40 @@ a{
     display: inline-block;
     width: 1px;
     height: 16px;
-    background-color: #000;
+    background-color: #fff;
 
     position: absolute;
     top: 50%;
-    left: 5px;
+    left: 3px;
     transform: translate(0,-50%);
 }
+
+
+/* navbar 區塊2 */
+
 .navbar2{
     height: 90px;
-    background-color: rgb(198, 7, 7);
+    background: rgb(237, 27, 27);
 }
 .nav-bar{
     height: 90px;
     display: flex;
     padding-top: 15px;
+    /* align-items: center; */
+}
+.navbar2 .nav-bar-logo{
+    height: 45px;
 }
 .navbar2 .nav-bar .logo{
-    font-size: 32px;
+    font-size: 20px;
+    font-style: italic;
     color: #fff;
-    padding-right: 30px;
+    padding-right: 60px;
 }
 .navbar2 .nav-bar .search{
-    border: 1px solid #000;
+    /* border: 1px solid #000; */
     height: 45px;
-    border-radius: 5px;
+    border-radius: 10px;
     background-color: #fff;
 }
 .navbar2 .nav-bar .search form{
@@ -145,7 +194,10 @@ a{
     border: none;
 }
 .navbar2 .nav-bar .search .btn{
-    background: rgb(198, 7, 7);;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgb(237, 27, 27);
     color: #fff;
     width: 32px;
     height: 32px;
@@ -153,10 +205,15 @@ a{
     margin-right: 3px;
     border-radius: 5px;
 }
+
+/* navbar 區塊3 */
 .navbar3{
-    background: rgb(198, 7, 7);;
+    background: rgb(237, 27, 27);
     padding-top: 15px;
     padding-bottom: 8px;
+}
+.nav3{
+    padding-left: 15px;
 }
 .navbar3 .nav3-li{
     display: inline-block;
@@ -164,6 +221,7 @@ a{
 }
 .navbar3 .nav3-li a{
     color: #fff;
+    font-weight: bolder;
 }
 .navbar3 .nav3-li::after{
     content: '';
@@ -177,6 +235,8 @@ a{
     right: 10px;
     transform: translate(0,-50%);
 }
+
+/* main 左邊廣告 */
 .side-ad{
     display: flex;
     flex-direction: column;
@@ -185,13 +245,14 @@ a{
 .side-ad-head{
     background-color: #e5e5e5;
     border-radius: 8px;
-    /* height: 200px; */
     overflow: hidden;
+    width: 188px;
+    height: 193px;
 }
 .side-ad-head .img{
     display: inline-block;
     vertical-align: middle;
-    width: 100%;
+    /* width: 100%; */
 }
 .side-ad-body{
     align-items: center;
@@ -204,7 +265,7 @@ a{
     overflow: hidden;
     padding: 8px;
     position: absolute;
-    width: 100%;
+    width: 188px;
 }
 .side-ad-body-logo{
     background-color: #f2f2f2;
@@ -239,26 +300,42 @@ a{
 }
 
 
+/* main 中間 */
+.banner{
+    border-radius: 8px;
+    height: 302px;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+}
 
 .slide img{
     width: 100%;
-    padding: 10px 5px;
+    
+    border-radius: 5px;
+}
+.ad-discount{
+    height: 98px;
+    /* justify-content: space-between; */
+
 }
 .ad-discount-list{
     display: flex;
     height: 100%;
+    width: 810px;
+    /* justify-content: center; */
     /* border: 1px solid blue; */
 }
 .ad-discount-item{
-    width: 260px;
-    margin: 0 auto;
+    width: 33.333333%;
+    /* margin: 0 auto; */
 }
 .ad-discount-link{
     border-radius: 8px;
     display: block;
     height: 100%;
     overflow: hidden;
-    height: 98px;
+    height: 100px;
 }
 .ad-discount-item .bg-img{
     height: 100%;
@@ -283,6 +360,7 @@ a{
     font-size: 14px;
 }
 
+/* main 右邊使用者卡片 */
 
 .user-card{
     align-items: center;
@@ -298,23 +376,27 @@ a{
     line-height: 21px;
     margin-top: -80px;
     padding-top: 12px;
-
-    height: 500px;
+    min-height: 498px;
+    /* height: 418px; */
 }
 .shippingSign{
-    background-color: rgb(6, 109, 254);
-    height: 47px;
+    background-color: rgb(7, 163, 247);
+    height: 38px;
     left: 0;
     position: absolute;
     top: -47px;
     width: 200px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 .shippingSign .signText{
     color: #fff;
     font-size: 16px;
     line-height: 24px;
-    padding-left: 10px;
-    padding-top: 7px;
+    /* padding-left: 10px;
+    padding-top: 7px; */
 }
 .shippingSign .signPrice{
     font-size: 24px;
@@ -364,24 +446,40 @@ a{
 
 
 
-.hero-2{
+
+
+/* second */
+.second-side-ad{
     display: flex;
-    width: 100%;
-    justify-content: space-between;
-    padding-left: 8px;
+    flex-direction: column;
+    /* justify-content: space-between; */
 }
-.sale{
+.second-side-ad-head{
+    background-color: #e5e5e5;
+    border-radius: 8px;
+    overflow: hidden;
+    width: 188px;
+    height: 248px;
+}
+.second-side-ad-head .img{
+    display: inline-block;
+    vertical-align: middle;
+    /* width: 100%; */
+}
+.sale-left{
     border: 3px solid #333;
     border-radius: 8px;
+    height: 512px;
 }
 .sale-right{
     border: 3px solid red;
     border-radius: 8px;
+    height: 512px;
 }
 .sale-bar-1{
     /* border: 1px solid blue; */
     width: 100%;
-    height: 60px;
+    height: 70px;
     display: flex;
     text-align: center;
     align-items: center;
@@ -391,7 +489,7 @@ a{
 .sale-bar-1-right{
     /* border: 1px solid blue; */
     width: 100%;
-    height: 60px;
+    height: 70px;
     display: flex;
     text-align: center;
     align-items: center;
@@ -420,12 +518,21 @@ a{
     font-size: 30px;
     font-weight: 800;
     padding: 12px 0;
+    height: 70px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 .bar-top-1-right .bar-top-ad-1-right{
     font-size: 30px;
     font-weight: 800;
     padding: 12px 0;
     color: #fff;
+    height: 70px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 .bar-top-2{
     width: 60%;
@@ -437,8 +544,9 @@ a{
     color: #fff;
     font-weight: 400;
     display: flex;
-    justify-content: center;
+    justify-content: flex-end;
     align-items: center;
+    margin-right: 18px;
 }
 .bar-top-2 .bar-top-ad-2{
     display: inline-block;
@@ -476,23 +584,24 @@ a{
     font-weight: 900;
     font-size: 14px;
 }
+.sale-bar-2 {
+    height: 264px;
+}
 .sale-bar-2 .cd-title{
     /* border: 1px solid pink; */
     width: 140px;
-    height: 40px;
+    height: 30px;
     background-color: #000;
     color: #fff;
-    padding: 10px 10px;
+    padding: 5px 10px;
     font-weight: bold;
+    margin-bottom: 8px;
 }
-
 .sale-bar-2 .cd-main{
     /* border: 1px solid pink; */
     width: 480px;
-    height: 230px;
     padding: 8px 16px 16px;
     display: flex;
-    margin-top: 30px;
 }
 .cd-main .cd-image{
     width: 200px;
@@ -505,6 +614,7 @@ a{
 .cd-text .prod-title{
     font-size: 18px;
     height: 54px;
+    margin-top: 32px;
     margin-bottom: 22px;
     font-weight: 700;
 }
@@ -534,10 +644,10 @@ a{
 .sale-bar-3 .sub-cd-title{
     /* border: 1px solid pink; */
     width: 140px;
-    height: 40px;
+    height: 30px;
     background-color: #000;
     color: #fff;
-    padding: 10px 10px;
+    padding: 5px 10px;
     font-weight: bold;
 }
 
@@ -550,8 +660,9 @@ a{
     margin-top: 15px;
 }
 .sub-cd-main .sub-cd-image{
-    width: 100px;
-    height: 100px;
+    width: 103px;
+    height: 103px;
+    vertical-align: bottom;
 }
 .sub-cd-main .sub-cd-text{
     flex-direction: column;
@@ -573,61 +684,108 @@ a{
     font-size: 12px;
     text-decoration: line-through;
 }
-.crazy-body{
-
-}
 .crazy-list{
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
-    padding: 18px 16px 0;
+    /* justify-content: center; */
+
+
+    padding: 18px 32px 0;
+    margin: 0 4px;
+    height: 441px;
 }
 .crazy-item{
-    width: 140px;
-    height: 220px;
+    /* width: 140px;
+    height: 220px; */
+
+    cursor: pointer;
+    margin: 0 40px 8px 0;
+    width: calc(33.333333% - 26.666666px);
+}
+.crazy-item:nth-of-type(3){
+    margin-right: 0;
+}
+.crazy-item:last-child{
+    margin-right: 0;
 }
 .crazy-item-info{
-
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 .crazy-item-image{
-    width: 120px;
-    height: 120px;
+    width: 118px;
+    height: 118px;
+    border-radius: 8px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+}
+.crazy-info-body{
+    width: 118px;
+    padding: 8px 0 4px;
 }
 .crazy-item-title{
     font-size: 14px;
-    height: 40px;
-    margin-bottom: 8px;
     font-weight: 900;
+    display: inline-block;
+    height: 21px;
+    margin-bottom: 0px;
+    overflow:hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
 }
 .crazy-item-price{
     font-size: 18px;
     font-weight: 700;
     color: #ea1717;
+
+    align-items: center;
+    display: flex;
+    width: 100%;
+    overflow:hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    margin-bottom: 7px;
+
 }
 .crazy-item-sale-price{
     color: #969696;
     font-size: 12px;
     text-decoration: line-through;
+
+    width: 100%;
+    overflow:hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+.tag-list{
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    margin-top: 12px;
 }
 .tag-item{
     background-color: #eee;
-    width: 150px;
     height: 40px;
     padding: 10px 0;
-    margin-top: 12px;
     border-radius: 20px;
     font-weight: 900;
     text-align: center;
+
+
+    width: 151px;
 }
 .tag-btn{
-    width: 150px;
-    height: 40px;
+    width: 151px;
+    /* height: 40px; */
     text-align: center;
-    padding-top: 20px;
+    margin-top: 20px;
+    /* padding-top: 20px; */
 }
 .tag-btn .link{
     color: #0090eb;
-    font-weight: bold;
-
-
+    font-weight: bold;  
 }
