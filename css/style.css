@@ -387,14 +387,14 @@ a{
     height: 38px;
     left: 0;
     position: absolute;
-    top: -47px;
+    top: 0px;
     width: 200px;
 
     display: flex;
     justify-content: center;
     align-items: center;
     /* 先隱藏 */
-    display: none;
+    /* display: none; */
 }
 .shippingSign .signText{
     color: #fff;
@@ -1044,6 +1044,10 @@ a{
 .brandday-item{
     cursor: pointer;
     opacity: 1;
+    transition: opacity .15s ease-in-out;
+}
+.brandday-item:hover{
+    opacity: .7;
 }
 .brandday-itembody{
     height: 272px;
