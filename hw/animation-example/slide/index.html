@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Slider Example</title>
+	<link rel="stylesheet" href="./vendor/normalize/normalize.css">
+	<link rel="stylesheet" href="./vendor/bootstrap-grid/bootstrap-grid.min.css">
+	<link rel="stylesheet" href="./vendor/OwlCarousel2-2.3.4/assets/owl.carousel.min.css">
+	<!-- <link rel="stylesheet" href="./vendor/OwlCarousel2-2.3.4/assets/owl.theme.default.min.css"> -->
+	<link rel="stylesheet" href="./vendor/animate/animate.css">
+	<link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+<div class="wrapper">
+	<!-- Start main  -->
+	<section class="main">
+		<!-- Start jumbotron -->
+		<div class="jumbotron">
+			<div class="slider-transition">
+				<div class="panel panel-1"></div>
+				<div class="panel panel-2"></div>
+
+			</div>
+			<div class="owl-carousel owl-theme">
+				<div class="slider-item">
+					<div class="slider-item__image" style="background-image: url(./images/slider/light-1.jpg);"></div>
+					<div class="drops">
+						<img class="drops-item-1" src="./images/drops/maple-l.png" alt="">
+						<img class="drops-item-2" src="./images/drops/maple-r.png" alt="">
+						<img class="drops-item-3" src="./images/drops/maple-l.png" alt="">
+						<img class="drops-item-4" src="./images/drops/maple-r.png" alt="">
+						<img class="drops-item-5" src="./images/drops/maple-r.png" alt="">
+					</div>
+					<div class="slider-item__content">
+						<div class="container">
+							<div class="col-lg-6">
+								<h2 class="slider-item__title">You know<br>What I'm saying</h2>
+								<p class="slider-item__para">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam impedit beatae, omnis voluptatem natus at. Eum at nam delectus, soluta exercitationem animi quod commodi molestias numquam eius rerum cum ipsam!</p>
+								<a href="#!" class="btn slider-item__btn">GIVE IT A TRY</a>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="slider-item">
+					<div class="slider-item__image" style="background-image: url(./images/slider/light-2.jpg);"></div>
+					<div class="drops">
+						<img class="drops-item-1" src="./images/drops/apricot-leaf.png" alt="">
+						<img class="drops-item-2" src="./images/drops/apricot-leaf.png" alt="">
+						<img class="drops-item-3" src="./images/drops/apricot-leaf.png" alt="">
+						<img class="drops-item-4" src="./images/drops/apricot-leaf.png" alt="">
+						<img class="drops-item-5" src="./images/drops/apricot-leaf.png" alt="">
+					</div>
+					<div class="slider-item__content">
+						<div class="container">
+							<div class="col-lg-6">
+								<h2 class="slider-item__title">You know<br>What I'm saying</h2>
+								<p class="slider-item__para">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam impedit beatae, omnis voluptatem natus at. Eum at nam delectus, soluta exercitationem animi quod commodi molestias numquam eius rerum cum ipsam!</p>
+								<a href="#!" class="btn slider-item__btn">GIVE IT A TRY</a>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="slider-item">
+					<div class="slider-item__image" style="background-image: url(./images/slider/light-3.jpg);"></div>
+					<div class="drops">
+						<img class="drops-item-1" src="./images/drops/orange-l.png" alt="">
+						<img class="drops-item-2" src="./images/drops/orange-r.png" alt="">
+						<img class="drops-item-3" src="./images/drops/orange-l.png" alt="">
+						<img class="drops-item-4" src="./images/drops/orange-r.png" alt="">
+						<img class="drops-item-5" src="./images/drops/orange-r.png" alt="">
+					</div>
+					<div class="slider-item__content">
+						<div class="container">
+							<div class="col-lg-6">
+								<h2 class="slider-item__title">You know<br>What I'm saying</h2>
+								<p class="slider-item__para">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam impedit beatae, omnis voluptatem natus at. Eum at nam delectus, soluta exercitationem animi quod commodi molestias numquam eius rerum cum ipsam!</p>
+								<a href="#!" class="btn slider-item__btn">GIVE IT A TRY</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- End jumbotron -->
+
+	</section>
+	<!-- End main  -->
+
+</div>
+</body>
+<script src="vendor/jquery-3.5.1/jquery-3.5.1.min.js"></script>
+<script src="./vendor/OwlCarousel2-2.3.4/owl.carousel.min.js"></script>
+<script>
+	$(document).ready(function(){
+		//Owl carousel
+		$('.owl-carousel').owlCarousel({
+			items:1,
+			nav:true,
+			navText:[],
+			loop:true,
+			mouseDrag:false
+		})
+		$('.owl-carousel').on('changed.owl.carousel', function(event) {
+			$('.slider-transition').addClass('animated');
+			setTimeout(function(){
+				$('.slider-transition').removeClass('animated');
+			},800)
+		})
+	})
+</script>
+</html>

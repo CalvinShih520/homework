@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="./css/normalize.css">
+	<link rel="stylesheet" href="./css/bootstrap-grid.min.css">
+	<link rel="stylesheet" href="./css/animate.css">
+	<link rel="stylesheet" href="./css/style.css">
+	<title>Document</title>
+
+</head>
+<body>
+	<div class="wrapper">
+
+		<!-- Start show up -->
+		<div class="hero">
+			<div class="container">
+				<div class="product-item wow">
+					<div class="row align-items-center">
+						<div class="col-lg-6">
+							<div class="image-container rellax" data-rellax-speed="4">
+								<div class="image" style="background-image: url('./images/img1.jpg');"></div>
+							</div>
+						</div>
+						<div class="col-lg-6">
+							<h2 class="title title--left">Luminaires, mobilier design et objets de decoration</h2>
+							<p class="para">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Corrupti omnis libero quas modi impedit id dolor quasi aut commodi. Incidunt omnis ducimus ratione suscipit dignissimos commodi accusamus maiores eum odit.</p>
+							<a href="#!" class="btn">EN SAVOIR PLUS</a>
+						</div>
+					</div>
+				</div>
+				<div class="product-item wow">
+					<div class="row align-items-center">
+						<div class="col-lg-6 order-lg-2">
+							<div class="image-container image-ratio-1-1 rellax"  data-rellax-speed="4">
+								<div class="image" style="background-image: url('./images/img2.jpg');"></div>
+							</div>
+						</div>
+						<div class="col-lg-6">
+							<h2 class="title">Luminaires, mobilier design et objets de decoration</h2>
+							<p class="para">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Corrupti omnis libero quas modi impedit id dolor quasi aut commodi. Incidunt omnis ducimus ratione suscipit dignissimos commodi accusamus maiores eum odit.</p>
+							<a href="#!" class="btn">EN SAVOIR PLUS</a>
+						</div>
+					</div>
+				</div>
+				<div class="product-item wow">
+					<div class="row align-items-center">
+						<div class="col-lg-6">
+							<div class="image-container rellax"  data-rellax-speed="4">
+								<div class="image" style="background-image: url('./images/img3.jpg');"></div>
+							</div>
+						</div>
+						<div class="col-lg-6 order-lg-1">
+							<h2 class="title title--left">Luminaires, mobilier design et objets de decoration</h2>
+							<p class="para">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Corrupti omnis libero quas modi impedit id dolor quasi aut commodi. Incidunt omnis ducimus ratione suscipit dignissimos commodi accusamus maiores eum odit.</p>
+							<a href="#!" class="btn">EN SAVOIR PLUS</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- End show up -->
+
+	</div>
+	<script src="./js/wow.min.js"></script>
+	<script src="./js/rellax.min.js"></script>
+	<script>
+		// Wow.js
+		wow = new WOW(
+                      {
+                      boxClass:     'wow',      // default
+                      animateClass: 'animated', // default
+                      offset:       200,          // default
+                    }
+                    )
+                    wow.init();
+		
+		// rellax.js
+		var  rellax = new Rellax('.rellax',{
+			center: true
+		});
+	</script>
+</body>
+</html>

@@ -1,0 +1,317 @@
+/* Global  */
+*{
+    box-sizing: border-box;
+    position: relative;
+}
+
+/* Component  */
+.wrapper{
+    width: 100%;
+    height: 100vh;
+    background-color: #ccc;
+    background: linear-gradient(#4c68d7,#8a3ab9,#bc2a8d,#cd486b,#e95950,#fbad50,#fccc63);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Camera  */
+.camera{
+    width: 0px;
+    height: 0px;
+    border-radius: 50px;
+    border: 10px solid #fff;
+
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    opacity: 0;
+
+    animation: 
+            ballUp .5s 1s forwards,
+            ballDown .2s 1.5s ease-in forwards,
+            cameraIn .3s 1.7s forwards;
+
+    perspective: 500px;
+}
+
+@keyframes ballUp{
+    0%{
+        width: 5px;
+        height: 5px;
+        top: 50%;
+        opacity: 0;
+    }
+    20%{
+        opacity: 1;
+    }
+    100%{
+        width: 5px;
+        height: 5px;
+        top: 10%;
+        opacity: 1;
+    }
+}
+@keyframes ballDown{
+    0%{
+        top: 10%;
+    }
+    100%{
+        top: 50%;
+    }
+}
+@keyframes cameraIn{
+    0%{
+        width: 5px;
+        height: 5px;
+    }
+    80%{
+        width: 250px;
+        height: 250px;
+    }
+    100%{
+        width: 200px;
+        height: 200px;
+    }
+}
+
+/* Lens  */
+.lens{
+    width: 0px;
+    height: 0px;
+    border-radius: 50%;
+    border: 15px solid #fff;
+    opacity: 0;
+
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+
+    animation: lensIn .3s 1.8s forwards;
+}
+@keyframes lensIn{
+    0%{
+        width: 0;
+        height: 0;
+        opacity: 0;
+    }
+    20%{
+        opacity: 1;
+    }
+    80%{
+        width: 120px;
+        height: 120px;
+        opacity: 1;
+    }
+    100%{
+        width: 100px;
+        height: 100px;
+        opacity: 1;
+    }
+}
+
+/* FlashLight  */
+.flashLight{
+    width: 20px;
+    height: 20px;
+    background: #fff;
+    border-radius: 50%;
+    transform: scale(0);
+
+    position: absolute;
+    right: 20px;
+    top: 20px;
+
+    animation: flashLightIn .3s 2.2s forwards;
+}
+@keyframes flashLightIn{
+    0%{
+        transform: scale(0);
+    }
+    100%{
+        transform: scale(1);
+    }
+}
+.flashLight::after{
+    content: '';
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, .5);
+    opacity: 0;
+
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+
+    animation: flash .3s 3s;
+    /* way 2 */
+    /* animation: flash .3s 3s 3; */
+}
+@keyframes flash{
+    0%{
+        opacity: 0;
+    }
+    25%{
+        opacity: 1;
+    }
+    50%{
+        opacity: 0;
+    }
+    75%{
+       opacity: 1; 
+    }
+    100%{
+        opacity: 0;
+    }
+    /* way 2 */
+    /* 0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    } */
+}
+
+/* Picture  */
+.picture{
+    width: 250px;
+    height: 250px;
+    border:10px solid #fff;
+    background-color: #ccc;
+
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+
+
+    animation: 
+        pictureIn 1s 3.5s backwards,
+        pictureFlip 1s 4.5s;
+
+    overflow: hidden;
+    transition: all .3s;
+}
+@keyframes pictureIn{
+    0%{
+        width: 120px;
+        height: 0;
+        opacity: 0;
+        top: 100%;
+        transform: translate(-50%,0) rotateX(0deg);
+    }
+    100%{
+        width: 120px;
+        height: 120px;
+        opacity: 1;
+        top: 100%;
+        transform: translate(-50%,0) rotateX(0deg);
+    }
+}
+@keyframes pictureFlip{
+    0%{
+        width: 120px;
+        height: 120px;
+        top: 100%;
+        transform: translate(-50%,0) rotateX(0deg);
+
+    }
+    100%{
+        width: 250px;
+        height: 250px;
+        top: 50%;
+        transform: translate(-50%,-50%) rotateX(360deg);
+    }
+}
+.picture:hover{
+    width: 400px;
+    height: 400px;
+    background-color: #fff;
+    border: 0;
+    padding: 20px;
+}
+
+/* Image Box  */
+.picture .imgBox{
+    width: 100%;
+    height: 300px;
+    /* border: 1px solid #f00; */
+    opacity: 0;
+    overflow: hidden;
+
+    animation: showImg 1s 5s forwards;
+}
+@keyframes showImg{
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+.picture .imgBox img{
+    width: 100%;
+    display: block;
+}
+/* text  */
+.picture .text{
+    opacity: 0;
+    transform: translate(-20%,0);
+    transition: all .5s .1s;
+}
+.picture:hover .text{
+    opacity: 1;
+    transform: translate(0,0);
+}
+.picture .text h1{
+    margin: 0;
+    font-size: 24px;
+    line-height: 40px;
+    color: #333;
+}
+.picture .text h2{
+    margin: 0;
+    font-size: 16px;
+    line-height: 30px;
+    color: #333;
+}
+
+/* Pointer  */
+.pointer{
+    width: 25px;
+    height: 25px;
+    background-image: url('../images/pointer.svg');
+    background-size: cover;
+    opacity: 0;
+
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translate(-50%,0);
+
+    animation: pointerHover 1.5s 5.5s infinite;
+}
+@keyframes pointerHover{
+    0%{
+        top: 150%;
+        opacity: 0;
+    }
+    20%{
+        opacity: 1;
+    }
+    80%{
+        opacity: 1;
+    }
+    100%{
+        opacity: 0;
+        top: 60%;
+    }
+}
+.picture:hover ~.pointer{
+    visibility: hidden;
+}

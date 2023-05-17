@@ -1,0 +1,59 @@
+/* Global  */
+*{
+    box-sizing: border-box;
+    position: relative;
+}
+
+/* Component  */
+.wrapper{
+    width: 100%;
+    height: 100vh;
+    background-color: #333;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.btn{
+    display: block;
+    padding: 24px 60px;
+    line-height: 40px;
+    border: 3px solid #fff;
+    text-decoration: none;
+    font-family: "微軟正黑體";
+    font-size: 20px;
+    font-weight: 600;
+    color:#fff;
+    overflow: hidden;
+    transition: color 1s;
+}
+.btn:hover{
+    color: #333;
+}
+.btn:hover:before{
+    top: 15px;
+}
+.btn::before{
+    content: '';
+    width: 320px;
+    height: 320px;
+    background-color: #fff;
+    border-radius: 130px;
+
+    position: absolute;
+    left: 50%;
+    top: 80px;
+    transform: translate(-50%,0);
+
+    animation: wave 5s infinite linear;
+    transition: all 1s;
+}
+
+@keyframes wave{
+    0%{
+        transform: translate(-50%,0) rotate(0);
+    }
+    100%{
+        transform: translate(-50%,0) rotate(360deg);
+    }
+}
