@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+	<meta charset="UTF-8">
+	<title>Form RWD example</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="vendor/normalize.css">
+	<link rel="stylesheet" href="vendor/bootstrap-grid.css">
+	<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<div class="wrapper">
+	<!-- Start main -->
+	<section class="main">
+		
+		<!-- Start form -->
+		<div class="card apply">
+			<div class="container">
+				<form action="" class="form">
+					<h2 class="apply__title">帳戶申請表單</h2>
+					<div class="row">
+						<div class="col-lg-6">
+							<h3 class="apply__subtitle">帳戶資訊</h3>
+							<div class="row">
+								<div class="col-lg-6">
+									<div class="form__item">
+										<label for="lastname">姓氏</label>
+										<input id="lastname" type="text">
+									</div>
+								</div>
+								<div class="col-lg-6">
+									<div class="form__item">
+										<label for="firstname">名字</label>
+										<input id="firstname" type="text">
+									</div>
+								</div>
+							</div>
+							<div class="form__item">
+								<label for="emial">Email</label>
+								<input id="email" type="text">
+							</div>
+							<div class="form__item">
+								<label for="phone">電話</label>
+								<input id="phone" type="text">
+							</div>	
+						</div>
+						<div class="col-lg-6">
+							<h3 class="apply__subtitle">密碼設定</h3>
+							<div class="form__item">
+								<label for="password_1">輸入密碼</label>
+								<input id="password_1" type="text">
+							</div>
+							<div class="form__item">
+								<label for="password_2">再次輸入密碼</label>
+								<input id="password_2" type="text">
+							</div>
+						</div>
+					</div>
+					<h3 class="apply__subtitle">通訊地址</h3>
+					<div class="form__item">
+						<label for="lastname">請輸入常用地址</label>
+						<input id="lastname" type="text">
+					</div>
+					<div class="form__item form__item--center apply__term">
+						<div class="checkbox-item">
+							<label for="term">
+								<span>我已詳閱<a href="#!">相關條款</a>並同意</span>
+							</label>
+							<input id="term" type="checkbox">
+							<div class="check"></div>
+						</div>
+					</div>
+					<div class="form__btn-group">
+						<input type="submit" class="btn btn--primary" value="確認送出">
+						<input type="reset" class="btn btn--secondary" value="重新填寫">
+					</div>
+				</form>
+			</div>
+		</div>
+		<!-- End form -->
+
+	</section>
+	<!-- End main -->
+</div>
+</body>
+</html>
