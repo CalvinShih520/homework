@@ -1106,7 +1106,7 @@ img{
     padding-right: 8px;
 }
 
-
+/* coupon */
 .coupon-body{
     border-top: 1px solid #e5e5e5;
 }
@@ -1124,8 +1124,16 @@ img{
     box-sizing: content-box;
     z-index: 1;
 }
-.swiper-slide{
+.coupon-body .swiper-slide{
     flex-shrink: 0;
+    width: 363.226px;
+    margin-right: 20px;
+}
+@media screen and (max-width: 1200px){
+    .coupon-body .swiper-wrapper{
+        justify-content: space-around;
+        flex-wrap: wrap;
+    }
 }
 .coupon-item{
     margin: 24px 0;
@@ -1246,6 +1254,31 @@ img{
     overflow: hidden;
     width: 100%;
 }
+.brandday-img img{
+    min-width: 220px;
+}
+.brandday .swiper-slide{
+    width: 224.8px; 
+    margin-right: 17px;
+}
+@media screen and (max-width: 1200px){
+    
+    .brandday .swiper-wrapper{
+        justify-content: space-around;
+        flex-wrap: wrap;
+    }
+    .brandday .slider .swiper{
+        overflow:visible
+    }
+    .brandday .swiper-slide{
+        margin-bottom: 20px;
+    }
+}
+@media screen and (max-width: 800px){
+    .brandday .swiper-slide{
+        width: 400px;
+    }
+}
 .brandday-info{
     border-radius: 0 0 8px 8px;
     box-shadow: 0 4px 0 rgba(43, 43, 43, .1);
@@ -1325,6 +1358,18 @@ img{
 }
 .rank .prodInfo__title{
     margin-bottom: 10px;
+}
+@media screen and (max-width : 1000px){
+    .rank .listInfo-item{
+        width: 150px;
+        margin-bottom: 60px;
+        margin-left: 40px;
+        margin-right: 42px;
+    }
+    .listInfo-list{
+        justify-content: center;
+        flex-wrap: wrap;
+    }
 }
 
 /* 主題推薦  */
@@ -1650,6 +1695,7 @@ img{
 }
 .listInfo-body-cutPrice .swiper-wrapper{
     flex-wrap: wrap;
+    width: 1224px;
 }
 .listInfo-body-cutPrice .swiper-slide{
     flex-shrink: 0;
@@ -1659,7 +1705,26 @@ img{
     padding: 14px 0 14px 8px;
     width: calc(100% - 120px);
 }
-
+.listInfo-body-cutPrice .swiper-slide{
+    width: 262px; 
+    margin-right: 24px;
+    margin-bottom: 24px;
+}
+@media screen and (max-width: 1243px){
+    .listInfo-body-cutPrice .swiper-wrapper{
+        flex-wrap: wrap;
+        width: 100%;
+        justify-content: space-around;
+    }
+    .listInfo-body-cutPrice .swiper-slide{
+        width: 40%;
+    }
+}
+@media screen and (max-width: 700px){
+    .listInfo-body-cutPrice .swiper-slide{
+        width: 80%;
+    }
+}
 
 /* adBanner--five  */
 .adBanner--five{
@@ -1684,7 +1749,11 @@ img{
     vertical-align: middle;
     width: 100%;
 }
-
+@media screen and (max-width:700px){
+    .five-banner{
+        display: none;
+    }
+}
 
 /* 熱銷捕獲 */
 .listInfo-body-catch{
@@ -1698,6 +1767,8 @@ img{
 .listInfo-body-catch .swiper-slide{
     flex-shrink: 0;
     height: 100%;
+    width: 115.857px; 
+    margin-right: 48px;
 }
 .listInfo-body-catch .listInfo-item{
     margin-bottom: 0;
@@ -1711,6 +1782,20 @@ img{
 }
 .listInfo-body-catch .prodInfo__title{
     margin-bottom: 10px;
+}
+@media screen and (max-width: 1243px){
+    .listInfo-body-catch .swiper-wrapper{
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
+    .listInfo-body-catch .swiper-slide{
+        width: 230px;
+        margin-bottom: 20px;
+    }
+    .listInfo-body-catch .prodInfo__img{
+        width: 240px;
+        height: 240px;
+    }
 }
 
 
@@ -2038,6 +2123,15 @@ img{
     padding: 20px 44px 32px;
     border-top: 1px solid #e5e5e5;
 }
+.like-boxShape .swiper-wrapper{
+    width: 1200px;
+    flex-wrap: wrap;
+}
+.like-boxShape .swiper-slide{
+    width: 118.857px; 
+    margin-right: 48px;
+    margin-bottom: 48px;
+}
 .like-boxShape .prodInfo__flex{
     flex-direction: column;
 }
@@ -2068,7 +2162,21 @@ img{
     width: 100%;
     z-index: 10;
 }
-
+@media screen and (max-width: 1243px){
+    .like-boxShape__listInfo .swiper-wrapper{
+        flex-wrap: wrap;
+        justify-content: space-around;
+        width: 100%;
+    }
+    .like-boxShape__listInfo .swiper-slide{
+        width: 230px;
+        margin-bottom: 20px;
+    }
+    .like-boxShape__listInfo .prodInfo__img{
+        width: 200px;
+        height: 200px;
+    }
+}
 
 
 
@@ -2302,4 +2410,42 @@ img{
 }
 .footer__info+.footer__info{
     margin-left: 8px;
+}
+@media screen and (max-width:1100px){
+    .footer__main{
+        flex-direction: column;
+        align-items: center;
+    }
+    .footer__logo{
+        justify-content: center;
+    }
+    .footer__fan{
+        justify-content: center;
+    }
+    .footer__contactus{
+        margin-bottom: 40px;
+    }
+    .footer__version{
+        margin-top: 40px;
+    }
+}
+@media screen and (max-width: 690px){
+    .footer__links{
+        flex-direction: column; 
+    }
+    .footer__siteListHead{
+        color: yellow;
+        justify-content: center;
+    }
+    .footer__siteList{
+        margin-bottom: 40px;
+        margin-right: 0;
+    }
+    .footer__siteLink{
+        text-align: center;
+        align-items: center;
+    }
+    .footer__copyright{
+        flex-direction: column;
+    }
 }
